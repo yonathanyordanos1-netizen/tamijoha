@@ -238,7 +238,7 @@ export default function Home() {
               marginTop: "48px",
             }}
           >
-            {services.map((service, i) => (
+            {services.map((service) => (
               <div
                 key={service.title}
                 className="reveal"
