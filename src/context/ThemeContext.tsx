@@ -12,14 +12,14 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<Theme>(() => {
-    const stored = localStorage.getItem("tamijoha-theme");
+    const stored = localStorage.getItem("zoe-theme");
     if (stored === "light" || stored === "dark") return stored;
     return "dark";
   });
 
   const setTheme = (t: Theme) => {
     setThemeState(t);
-    localStorage.setItem("tamijoha-theme", t);
+    localStorage.setItem("zoe-theme", t);
   };
 
   const toggleTheme = () => {

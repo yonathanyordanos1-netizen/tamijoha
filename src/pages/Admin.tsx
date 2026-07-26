@@ -38,6 +38,14 @@ export default function Admin() {
     }
   }, [convexBookings]);
 
+  // Load local fallback bookings
+  useEffect(() => {
+    if (!convexBookings) {
+      const saved = JSON.parse(localStorage.getItem("zoe-bookings") || "[]");
+      setLocalBookings(saved);
+    }
+  }, [convexBookings]);
+
   const bookings = convexBookings ? (convexBookings as unknown as Booking[]) : localBookings;
 
   const handleLogin = (e: React.FormEvent) => {
@@ -388,7 +396,7 @@ export default function Admin() {
                         transition: "background 0.2s ease",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.background = "rgba(205, 127, 50, 0.06)";
+                        e.currentTarget.style.background = "rgba(232, 180, 184, 0.08)";
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.background = "transparent";

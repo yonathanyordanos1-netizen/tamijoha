@@ -33,8 +33,8 @@ export default function Footer() {
                 maxWidth: "300px",
               }}
             >
-              Premium men's grooming in Addis Ababa. Where style meets
-              craftsmanship.
+              Specialize in all women & kids hair style & makeup. Your one-stop
+              destination for all things glamorous in Summit Pepsi, Addis Ababa.
             </p>
           </div>
 
@@ -97,22 +97,22 @@ export default function Footer() {
               <div style={{ display: "flex", gap: "10px", color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
                 <span style={{ color: "var(--color-secondary)", flexShrink: 0 }}>📍</span>
                 <span>
-                  Sarbet Noc Bldg, 1st Floor
+                  Summit PEPSI Factory
                   <br />
-                  Next to The Food Boutique
+                  Addis Ababa 1000
                   <br />
-                  Addis Ababa, Ethiopia
+                  Ethiopia
                 </span>
               </div>
               <div style={{ display: "flex", gap: "10px", color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
                 <span style={{ color: "var(--color-secondary)", flexShrink: 0 }}>📞</span>
-                <a href="tel:+251911032850" style={{ color: "var(--color-text-muted)" }}>
-                  +251 911 03 28 50
+                <a href="tel:+251922873589" style={{ color: "var(--color-text-muted)" }}>
+                  +251 922 87 35 89
                 </a>
               </div>
               <div style={{ display: "flex", gap: "10px", color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
                 <span style={{ color: "var(--color-secondary)", flexShrink: 0 }}>🕐</span>
-                <span>Mon–Sat: 8:30 AM – 8:30 PM</span>
+                <span>Mon–Sun: 8:00 AM – 8:00 PM</span>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function Footer() {
               fontSize: "0.85rem",
             }}
           >
-            &copy; {currentYear} Tamijoha Men's Studio. All rights reserved.
+            &copy; {currentYear} Zoe Hair Salon and Makeup Studio. All rights reserved.
           </p>
           <div style={{ display: "flex", gap: "16px" }}>
             <span

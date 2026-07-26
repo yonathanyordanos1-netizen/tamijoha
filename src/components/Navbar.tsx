@@ -45,7 +45,7 @@ export default function Navbar() {
           ? "var(--color-nav-bg)"
           : "transparent",
         backdropFilter: isScrolled ? "blur(20px) saturate(1.2)" : "none",
-        borderBottom: isScrolled ? "1px solid rgba(205, 127, 50, 0.1)" : "none",
+        borderBottom: isScrolled ? "1px solid rgba(232, 180, 184, 0.15)" : "none",
         transition: "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
       }}
     >

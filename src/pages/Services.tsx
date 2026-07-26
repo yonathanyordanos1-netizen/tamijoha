@@ -3,36 +3,57 @@ import useReveal from "../hooks/useReveal";
 
 const serviceCategories = [
   {
-    category: "Haircuts & Styling",
+    category: "Hair Styling",
     items: [
-      { name: "Classic Haircut", price: "350 ETB", desc: "Precision scissor & clipper cut" },
-      { name: "Custom Cut", price: "500 ETB", desc: "Tailored styling with consultation" },
-      { name: "Kids Haircut", price: "250 ETB", desc: "For ages 12 and under" },
-      { name: "Buzz Cut", price: "250 ETB", desc: "Clean, uniform clipper cut" },
+      { name: "Hairstyling (Blow-dry)", price: "400 ETB", desc: "Professional blow-dry and styling" },
+      { name: "Hairstyling (Curly)", price: "600 ETB", desc: "Specialized curly hair care & styling" },
+      { name: "Hair Straightening", price: "800 ETB", desc: "Sleek straightening treatment" },
+      { name: "Shampoo & Conditioning", price: "200 ETB", desc: "Professional wash with quality products" },
+      { name: "Children's Haircut", price: "250 ETB", desc: "Gentle, patient cuts for kids" },
     ],
   },
   {
-    category: "Colour & Treatment",
+    category: "Braids & Extensions",
     items: [
-      { name: "Hair Colour (Full)", price: "1,200 ETB", desc: "Premium permanent colour" },
-      { name: "Hair Colour (Roots)", price: "700 ETB", desc: "Root touch-up application" },
-      { name: "Scalp Treatment", price: "600 ETB", desc: "Deep cleansing & rejuvenation" },
-      { name: "Shampoo & Condition", price: "200 ETB", desc: "Professional wash with luxury products" },
+      { name: "Braids (Full Head)", price: "1,000 ETB", desc: "Classic braiding styles" },
+      { name: "Box Braids", price: "1,500 ETB", desc: "Full head classic box braids" },
+      { name: "Twist Braids", price: "1,200 ETB", desc: "Elegant twist braid styles" },
+      { name: "Curly Hair Extensions", price: "From 2,000 ETB", desc: "Premium quality curly extensions" },
+      { name: "Hair Extensions", price: "From 2,500 ETB", desc: "Premium hair extensions installed" },
     ],
   },
   {
-    category: "Grooming & Special",
+    category: "Colour Services",
     items: [
-      { name: "Beard Trim & Shape", price: "300 ETB", desc: "Expert beard shaping & line-up" },
-      { name: "Hot Towel Shave", price: "400 ETB", desc: "Traditional straight razor shave" },
-      { name: "In-Home Service", price: "From 800 ETB", desc: "Premium grooming at your location" },
-      { name: "Full Package", price: "1,500 ETB", desc: "Cut, colour, treatment & beard" },
+      { name: "Hair Colouring (Full)", price: "1,500 ETB", desc: "Premium permanent colour application" },
+      { name: "Hair Colouring (Roots)", price: "800 ETB", desc: "Root touch-up application" },
+      { name: "Hair Highlighting", price: "1,800 ETB", desc: "Full head foil highlights" },
+      { name: "Hair Regrowth Treatment", price: "1,200 ETB", desc: "Root regrowth colour treatment" },
+    ],
+  },
+  {
+    category: "Makeup Services",
+    items: [
+      { name: "Makeup Application", price: "1,500 ETB", desc: "Professional makeup for any occasion" },
+      { name: "Bridal Makeup", price: "3,000 ETB", desc: "Complete bridal makeup package" },
+      { name: "Eye Makeup", price: "800 ETB", desc: "Professional eye makeup application" },
+      { name: "Makeup Consultation", price: "500 ETB", desc: "Personalized makeup consultation & trial" },
+    ],
+  },
+  {
+    category: "Body & Additional",
+    items: [
+      { name: "Body Waxing (Full)", price: "800 ETB", desc: "Full body waxing service" },
+      { name: "Body Waxing (Partial)", price: "400 ETB", desc: "Selective body waxing" },
+      { name: "Eyebrow Shaping", price: "200 ETB", desc: "Precision eyebrow shaping" },
+      { name: "Manicure", price: "500 ETB", desc: "Professional nail shaping, cuticle care & polish" },
+      { name: "Pedicure", price: "600 ETB", desc: "Complete foot care & nail polish" },
     ],
   },
 ];
 
 export default function Services() {
-  useReveal();
+  useReveal([], { stagger: 0.04 });
 
   return (
     <div className="page-enter">
@@ -54,7 +75,7 @@ export default function Services() {
             width: "400px",
             height: "400px",
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(205, 127, 50, 0.06), transparent 70%)",
+            background: "radial-gradient(circle, rgba(232, 180, 184, 0.08), transparent 70%)",
           }}
         />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
@@ -75,8 +96,8 @@ export default function Services() {
           <h1 className="section-title reveal">Services & Pricing</h1>
           <div className="section-divider" />
           <p className="section-subtitle reveal">
-            Premium grooming services tailored to your style. Every cut, colour,
-            and treatment is delivered with precision and care.
+            From stunning hair transformations to flawless makeup artistry,
+            every service is delivered with care, creativity, and expertise.
           </p>
         </div>
       </section>
@@ -115,6 +136,8 @@ export default function Services() {
                 {cat.items.map((item) => (
                   <div
                     key={item.name}
+                    className="reveal"
+                    data-reveal-type="reveal-fade-left"
                     style={{
                       display: "flex",
                       justifyContent: "space-between",
@@ -128,11 +151,13 @@ export default function Services() {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.borderColor = "var(--color-secondary)";
-                      e.currentTarget.style.transform = "translateX(6px)";
+                      e.currentTarget.style.transform = "translateX(8px)";
+                      e.currentTarget.style.boxShadow = "0 4px 20px rgba(232, 180, 184, 0.15)";
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.borderColor = "var(--color-border)";
                       e.currentTarget.style.transform = "none";
+                      e.currentTarget.style.boxShadow = "none";
                     }}
                   >
                     <div style={{ flex: 1 }}>

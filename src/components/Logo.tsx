@@ -18,13 +18,13 @@ export default function Logo({ showText = true, size = "md", link = false }: Log
   };
 
   const { width, height, fontSize } = dimensions[size];
-  const bronze = "#cd7f32";
-  const shieldFill = isDark ? "#1e293b" : "#f1f5f9";
-  const textColor = isDark ? "#f1f5f9" : "#0f172a";
+  const brandColor = "#E8B4B8";
+  const shieldFill = isDark ? "#252540" : "#F5F0F2";
+  const textColor = isDark ? "#F0EDF0" : "#2A2030";
 
   const logoContent = (
     <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-      {/* Modern diamond / gem logo mark */}
+      {/* Elegant diamond / gem logo mark */}
       <svg
         width={width}
         height={height}
@@ -36,32 +36,32 @@ export default function Logo({ showText = true, size = "md", link = false }: Log
         <path
           d="M28 4L48 18L40 46L28 52L16 46L8 18L28 4Z"
           fill={shieldFill}
-          stroke={bronze}
+          stroke={brandColor}
           strokeWidth="1.5"
         />
         {/* Inner diamond */}
         <path
           d="M28 12L40 22L34 42L28 46L22 42L16 22L28 12Z"
           fill="none"
-          stroke={bronze}
+          stroke={brandColor}
           strokeWidth="1"
           opacity="0.4"
         />
-        {/* Stylized 'T' monogram */}
+        {/* Stylized 'Z' monogram */}
         <text
           x="28"
           y="33"
           textAnchor="middle"
-          fill={bronze}
+          fill={brandColor}
           fontFamily="'Playfair Display', Georgia, serif"
           fontSize="20"
           fontWeight="700"
         >
-          T
+          Z
         </text>
-        {/* Bronze accent dots */}
-        <circle cx="28" cy="8" r="1.5" fill={bronze} />
-        <circle cx="28" cy="48" r="1.5" fill={bronze} />
+        {/* Brand accent dots */}
+        <circle cx="28" cy="8" r="1.5" fill={brandColor} />
+        <circle cx="28" cy="48" r="1.5" fill={brandColor} />
       </svg>
 
       {showText && (
@@ -73,23 +73,23 @@ export default function Logo({ showText = true, size = "md", link = false }: Log
               fontWeight: 700,
               color: textColor,
               lineHeight: 1,
-              letterSpacing: "1.5px",
+              letterSpacing: "2px",
             }}
           >
-            TAMIJOHA
+            ZOE
           </div>
           <div
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: size === "sm" ? "0.55rem" : "0.6rem",
-              color: bronze,
-              letterSpacing: "4px",
+              color: brandColor,
+              letterSpacing: "3px",
               textTransform: "uppercase",
               marginTop: "3px",
               fontWeight: 500,
             }}
           >
-            Men's Studio
+            Hair Salon & Makeup Studio
           </div>
         </div>
       )}

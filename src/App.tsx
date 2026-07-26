@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import BackToTop from "./components/BackToTop";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
@@ -19,6 +21,7 @@ export default function App() {
         minHeight: "100vh",
       }}
     >
+      <ScrollToTop />
       <Navbar />
       <main style={{ flex: 1 }}>
         <Routes>
@@ -31,6 +34,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <BackToTop />
     </div>
     </ThemeProvider>
   );
